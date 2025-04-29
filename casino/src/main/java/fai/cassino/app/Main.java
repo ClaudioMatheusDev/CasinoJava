@@ -1,19 +1,19 @@
-package fai.casino.app;
+package fai.cassino.app;
 
-import fai.casino.Model.Jogador;
-import fai.casino.Model.Jogo;
-import fai.casino.Model.Mesa;
-import fai.casino.Model.Modalidade;
-import fai.casino.Model.Rodada;
+import fai.cassino.Model.Jogador;
+import fai.cassino.Model.Jogo;
+import fai.cassino.Model.Mesa;
+import fai.cassino.Model.Modalidade;
+import fai.cassino.Model.Rodada;
 
 public class Main {
     public static void main(String[] args) {
         Jogador jogador1 = new Jogador("Claudio");
         Jogador jogador2 = new Jogador("Matheus");
 
-        Jogo jogo = new Jogo("Cassino Royale");
+        Jogo jogo = new Jogo("Cassino MS");
 
-        Modalidade poker = new Modalidade("Pôquer");
+        Modalidade poker = new Modalidade("Black Jack");
         Modalidade roleta = new Modalidade("Roleta");
 
         jogo.adicionarModalidade(poker);

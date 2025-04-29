@@ -1,4 +1,4 @@
-package fai.casino.Model;
+package fai.cassino.Model;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package fai.casino.Model;
+package fai.cassino.Model;
 
 public class Modalidade {
     private String nome;
