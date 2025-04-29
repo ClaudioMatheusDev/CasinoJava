@@ -3,19 +3,17 @@ package fai.casino.Model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Jogo {
+public class Mesa {
     private String nome;
+    private String regras;
     private List<Jogador> jogadores;
     private List<Modalidade> modalidades;
-    private List<Rodada> rodadas;
-    private List<Mesa> mesas;
 
-    public Jogo(String nome) {
+    public Mesa(String nome, String regras) {
         this.nome = nome;
+        this.regras = regras;
         this.jogadores = new ArrayList<>();
         this.modalidades = new ArrayList<>();
-        this.rodadas = new ArrayList<>();
-        this.mesas = new ArrayList<>();
     }
 
     public void adicionarJogador(Jogador jogador) {
@@ -25,15 +23,17 @@ public class Jogo {
     }
 
     public void adicionarModalidade(Modalidade modalidade) {
-        modalidades.add(modalidade);
-    }
-
-    public void adicionarRodada(Rodada rodada) {
-        rodadas.add(rodada);
+        if (!modalidades.contains(modalidade)) {
+            modalidades.add(modalidade);
+        }
     }
 
     public String getNome() {
         return nome;
+    }
+
+    public String getRegras() {
+        return regras;
     }
 
     public List<Jogador> getJogadores() {
@@ -43,17 +43,4 @@ public class Jogo {
     public List<Modalidade> getModalidades() {
         return modalidades;
     }
-
-    public List<Rodada> getRodadas() {
-        return rodadas;
-    }
-
-    public void adicionarMesa(Mesa mesa) {
-        mesas.add(mesa);
-    }
-    
-    public List<Mesa> getMesas() {
-        return mesas;
-    }
-
 }
